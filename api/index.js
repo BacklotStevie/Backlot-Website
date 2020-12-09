@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const mongoose = require("mongoose");
-const Review =  require("./models/ReviewsSchema")
+const Review = require("./models/ReviewsSchema")
 app.use(cors())
 
 
@@ -13,7 +13,7 @@ mongoose
         console.log(
             `Connected to Mongo! Database name: "${x.connections[0].name}"`
         );
-        
+
     })
     .catch((err) => {
         console.error("Error connecting to mongo", err);
@@ -21,11 +21,13 @@ mongoose
 
 app.get("/reviews", (req, res) => {
     Review.find()
-    .then((review)=>{
-        res.json(review)
-    })
-    
-})
+        .then((review) => {
+            res.json(review)
+        })
+
+});
+
+app.use("/auth", require("./routes/users"))
 
 app.listen(3000, () => {
     console.log("running")

@@ -1,10 +1,12 @@
 const mongoose = require("mongoose")
 
+const Reviews = require("../models/ReviewsSchema");
+
 const reviews = [
     {
         title: "We're Back!",
         writer: "Steven Sarria",
-        review: [
+        reviews: [
             {
                 title: "",
                 info: "First and foremost, we’d like to apologize to our fans for our unannounced absence. After taking some time off to re-evaluate where we wanted to take Backlot, we realized we needed a complete re-vamp of our website, culture and mission statement. Inside the Backlot (formerly known as Backlot Review), is no longer just a film review website. No longer is this a website where all our content will be long, thought-out reviews on the latest films in Hollywood and television. Inside the Backlot is something much bigger than that. Inside the Backlot is a community. A place for cinephiles and filmmakers to connect and interact with one another. Our goal here at the Backlot is to expose the public to new films and up-and-coming filmmakers looking to leave their mark on the industry. Here at the Backlot, you are joined by hundreds of other people who share the same passion and interests as you – film and all it’s components. This is a hub for filmmakers, film critics and film lovers to come together and discuss new ideas, the latest trends and their favorite movies with one another. Inside the Backlot is proud to introduce The Backlot Podcast Network. Here, you will find the first two introductions to the network with Inside the Backlot’s first two podcasts: Backlot Review and The Stream Exchange. Backlot Review will be a weekly film podcast where co-hosts Steven Sarria and Nick Sarmiento discuss that week’s big theatrical release. The Stream Exchange will be more television-oriented: a podcast where co-hosts Steven Sarria and Remy Sallinger each choose a season of television that the other is forced to watch, and discuss them episode-by-episode. Inside the Backlot will continue to produce written articles, and look to release videos in the near-future. These videos will include behind-the-scenes looks at various Miami-based film festivals and interviews with local up-and-coming directors, producers and actors. As Backlot continues to grow, we look for young aspiring filmmakers to grow with us. As our platform continues to grow and our reach continues to expand, Backlot wants to partner with aspiring filmmakers to give them a platform to preview their films and projects. For many, film is a hobby. For some, film is a passion. Though one thing is certain: film is art, and like any art, it’s a way to get your voice heard. Here are our voices. Welcome to Inside the Backlot."
@@ -15,7 +17,7 @@ const reviews = [
     {
         title: "5 Questions We Still Have After the Series Finale of Game of Thrones",
         writer: "Nick Sarmiento",
-        review: [
+        reviews: [
             {
                 title: "What was the point of Jon Snow being a Targaryen?",
                 info: "In the season 7 finale “The Dragon and the Wolf” we learn that Jon Snow is not the bastard of Ned Stark, but that he is the son of Rhaegar Targaryen and Lyanna Stark. With Jon having the rightful claim to the throne this kept fans wondering how this would affect the relationship not only between him and Daenerys but all of Westeros. Throughout the final season we are teased with moments regarding Jon’s true identity, it even seems at one point that the secret gets out thanks to Varys. But ultimately Jon being the rightful heir to the Iron Throne serves no real purpose in the final season. Was his true identity only used as a crutch to help support Daenerys turning mad so quickly this season? It seems that the biggest secret in the shows universe proved to be pointless and served no real purpose in furthering the shows plot."
@@ -42,7 +44,7 @@ const reviews = [
     {
         title: "John Wick 3 Continues to Build Upon An Already Great Series",
         writer: "Steven Sarria",
-        review: [
+        reviews: [
             {
                 title: "",
                 info: "Before we start this review, let’s get three things straight right off the bat."
@@ -79,14 +81,14 @@ const reviews = [
     }
 ]
 
-module.exports = mongoose.model("reviews", reviewSchema, "reviews")
+
 mongoose
-    .connect("mongodb://localhost/starter-code", { useNewUrlParser: true })
+    .connect("mongodb://localhost/final-project", { useNewUrlParser: true })
     .then((x) => {
         console.log(
             `Connected to Mongo! Database name: "${x.connections[0].name}"`
         );
-        return Movie.insertMany(reviews);
+        return Reviews.insertMany(reviews);
     })
     .then((reviews) => {
         console.log("Db Seeded");
@@ -95,4 +97,4 @@ mongoose
         console.error("Error connecting to mongo", err);
     });
 
-// module.exports = movies;
+

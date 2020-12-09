@@ -3,6 +3,7 @@ const cors = require('cors')
 const app = express()
 const mongoose = require("mongoose");
 const Review = require("./models/ReviewsSchema")
+const bodyParser = require("body-parser");
 app.use(cors())
 
 
@@ -19,6 +20,9 @@ mongoose
         console.error("Error connecting to mongo", err);
     });
 
+
+
+
 app.get("/reviews", (req, res) => {
     Review.find()
         .then((review) => {
@@ -26,6 +30,8 @@ app.get("/reviews", (req, res) => {
         })
 
 });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/auth", require("./routes/users"))
 

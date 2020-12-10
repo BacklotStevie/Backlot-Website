@@ -1,13 +1,14 @@
+import Axios from 'axios';
 import React from 'react';
+import axios from 'axios';
 
-const submit = () => {
+const addReviewHandler = () => {
 
     function submit() {
         let combined = {
             ...article,
             reviews: reviews
         }
-        /// ....
     }
 
     return (
@@ -17,4 +18,4 @@ const submit = () => {
     );
 };
 
-export default submit;
+export default addReviewHandler;

@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const Review = require("./models/ReviewsSchema")
 const bodyParser = require("body-parser");
 app.use(cors())
-
+app.options('*', cors()) // include before other routes
 
 //Nodemon file
 mongoose

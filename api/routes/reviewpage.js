@@ -11,6 +11,16 @@ app.get("/reviews", (req, res) => {
         .catch((err) => {
             res.status(500), json({ message: "Oops" })
         })
-})
+});
+
+app.get("/review/:id", (req, res) => {
+    Review.findById(req.params.id)
+        .then((review) => {
+            res.json(review);
+        })
+        .catch((err) => {
+            res.status(500).json({ message: "Oops" });
+        });
+});
 
 module.exports = app

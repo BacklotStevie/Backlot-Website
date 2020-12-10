@@ -31,6 +31,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/auth", require("./routes/users"))
 app.use("/", require("./routes/reviewpage"))
 
+app.post("/writeReview", (req, res) => {
+    console.log(req.body);
+    res.send("ok")
+})
+
 app.listen(3000, () => {
     console.log("running")
 })

@@ -33,8 +33,14 @@ app.use("/", require("./routes/reviewpage"))
 
 app.post("/writeReview", (req, res) => {
     console.log(req.body);
-    res.send("ok")
-})
+    Review.create(req.body)
+        .then((insertedReview) => {
+            res.send("review inserted")
+        })
+        .catch((err) => {
+            res.status(500).send("Oops!")
+        })
+});
 
 app.listen(3000, () => {
     console.log("running")

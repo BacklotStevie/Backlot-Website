@@ -4,20 +4,37 @@ function AddReview() {
     const [article, setArticle] = useState({
         title: "",
         writer: "",
-        reviews: {
-            title: "",
-            info: "",
-        },
-        images: ""
+        img: ""
     })
+
+    const [reviews, setReviews] = useState({
+        heading: "",
+        info: "",
+    })
+
+    function handleArticleChange(event) {
+        setArticle({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    function handleReviewChange(event) {
+        setReviews({
+            [event.target.name]: event.target.value
+        })
+    }
+
+
     return (
         <div>
-            <input type="text" name="title" value={article.title} placeholder="title"></input>
-            <input type="text" name="writer" value={article.writer} placeholder="writer"></input>
-            <input type="text" name="reviews.title" value={article.reviews.title} placeholder="reviews.title"></input>
-            <input type="text" name="reviews.info" value={article.reviews.info} placeholder="reviews.info"></input>
-            <input type="text" name="images" value={article.images} placeholder="images"></input>
+            <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
+            <input type="text" name="writer" value={article.writer} placeholder="writer" onChange={handleArticleChange}></input>
+            <input type="text" name="heading" value={reviews.heading} placeholder="headings" onChange={handleReviewChange}></input>
+            <input type="text" name="info" value={reviews.info} placeholder="body text" onChange={handleReviewChange}></input>
+            <input type="text" name="img" value={article.img} placeholder="images" onChange={handleArticleChange}></input>
             <button>Submit</button>
         </div>
     )
 }
+
+export default AddReview;

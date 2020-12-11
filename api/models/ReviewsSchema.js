@@ -6,7 +6,7 @@ const reviewsSchema = new Schema({
     writer: String,
     reviews: [
         {
-            title: String,
+            heading: String,
             info: String,
         }
     ],

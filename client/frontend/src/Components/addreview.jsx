@@ -32,7 +32,6 @@ function AddReview() {
     }
 
     function addReviewHandler(event) {
-        debugger
         event.preventDefault();
         axios.post("http://localhost:3000/writeReview", combined)
             .then((res) => {

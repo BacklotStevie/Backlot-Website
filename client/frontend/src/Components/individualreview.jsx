@@ -2,9 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const IndividualReview = (props) => {
     const [individual, setIndividual] = useState(false)
+    const history = useHistory()
 
     useEffect(() => {
         axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
@@ -15,6 +17,17 @@ const IndividualReview = (props) => {
             })
     }, [])
     debugger
+
+    const handleOnClick = () => {
+        axios.delete(`http://localhost:3000/reviews/${props.match.params.id}`)
+            .then((res) => {
+                console.log(res)
+                history.push("/reviews")
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
 
     const ShowIndividual = () => {
 
@@ -36,6 +49,7 @@ const IndividualReview = (props) => {
 
                 <div>
                     <Link to={`/reviews/edit/${individual._id}`}>Edit</Link>
+                    <button onClick={handleOnClick}>Delete</button>
                 </div>
             </div>
         )

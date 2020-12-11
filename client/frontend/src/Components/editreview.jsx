@@ -8,10 +8,10 @@ function EditReview(props) {
         img: "",
     })
 
-    const [reviews, setReviews] = useState({
+    const [reviews, setReviews] = useState([{
         heading: "",
         info: "",
-    })
+    }])
 
     function handleArticleChange(event) {
         setArticle({
@@ -20,17 +20,22 @@ function EditReview(props) {
         })
     }
 
-    function handleReviewChange(event) {
-        setReviews({
-            ...reviews,
-            [event.target.name]: event.target.value
-        })
+    function handleReviewChange(event, index) {
+        let reviewsCopy = [...reviews]
+        let reviewObjectCopy = { ...reviewsCopy[index] }
+
+        reviewObjectCopy[event.target.name] = event.target.value;
+        reviewsCopy[index] = reviewObjectCopy;
+
+        setReviews(reviewsCopy);
     }
 
     useEffect(() => {
         axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
             .then((response) => {
-                setReviews(response.data)
+                debugger
+                setArticle(response.data)
+                setReviews(response.data.reviews)
             })
             .catch((err) => {
                 console.log(err);
@@ -46,7 +51,7 @@ function EditReview(props) {
 
 
         event.preventDefault();
-        axios.put(`hhtp://localhost:3000/reviews/${props.match.params.id}`, combined)
+        axios.put(`http://localhost:3000/reviews/${props.match.params.id}`, combined)
             .then((res) => {
                 console.log(res)
             })
@@ -59,8 +64,14 @@ function EditReview(props) {
         <form onSubmit={editReviewHandler}>
             <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
             <input type="text" name="writer" value={article.writer} placeholder="writer" onChange={handleArticleChange}></input>
-            <input type="text" name="heading" value={reviews.heading} placeholder="headings" onChange={handleReviewChange}></input>
-            <input type="text" name="info" value={reviews.info} placeholder="body text" onChange={handleReviewChange}></input>
+
+            {reviews.map((review, index) =>
+                <>
+                    <input type="text" name="heading" value={review.heading} placeholder="headings" onChange={(e) => handleReviewChange(e, index)}></input>
+                    <input type="text" name="info" value={review.info} placeholder="body text" onChange={(e) => handleReviewChange(e, index)}></input>
+                </>
+            )}
+
             <input type="text" name="img" value={article.img} placeholder="images" onChange={handleArticleChange}></input>
             <button type="submit">Submit</button>
         </form>

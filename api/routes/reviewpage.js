@@ -34,4 +34,14 @@ app.put("/reviews/:id", (req, res) => {
         });
 });
 
+app.delete("/reviews/:id", (req, res) => {
+    Review.findByIdAndDelete(req.params.id, req.body)
+        .then((deleteReview) => {
+            res.send("Deleted")
+        })
+        .catch((err) => {
+            res.status(500).send("Oops");
+        });
+});
+
 module.exports = app

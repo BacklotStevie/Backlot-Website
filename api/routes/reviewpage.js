@@ -13,7 +13,7 @@ app.get("/reviews", (req, res) => {
         })
 });
 
-app.get("/review/:id", (req, res) => {
+app.get("/reviews/:id", (req, res) => {
     Review.findById(req.params.id)
         .then((review) => {
             res.json(review);
@@ -23,7 +23,7 @@ app.get("/review/:id", (req, res) => {
         });
 });
 
-app.put("/review/:id", (req, res) => {
+app.put("/reviews/:id", (req, res) => {
     console.log(req.body)
     Review.findByIdAndUpdate(req.params.id, req.body)
         .then((oldReview) => {

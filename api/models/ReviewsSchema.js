@@ -10,7 +10,7 @@ const reviewsSchema = new Schema({
             info: String,
         }
     ],
-    images: String,
+    img: String,
 })
 
 module.exports = mongoose.model("Review", reviewsSchema, "reviews")

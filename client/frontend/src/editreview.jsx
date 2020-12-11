@@ -1,7 +1,8 @@
+import Axios from 'axios'
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function AddReview() {
+function EditReview() {
     const [article, setArticle] = useState({
         title: "",
         writer: "",
@@ -28,7 +29,7 @@ function AddReview() {
     }
 
 
-    function addReviewHandler(event) {
+    function editReviewHandler(event) {
         debugger
         let combined = {
             ...article,
@@ -36,7 +37,7 @@ function AddReview() {
         }
 
         event.preventDefault();
-        axios.post("http://localhost:3000/writeReview", combined)
+        axios.put("http://localhost:3000/writeReview", combined)
             .then((res) => {
                 console.log(res)
             })
@@ -46,7 +47,7 @@ function AddReview() {
     }
 
     return (
-        <form onSubmit={addReviewHandler}>
+        <form onSubmit={editReviewHandler}>
             <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
             <input type="text" name="writer" value={article.writer} placeholder="writer" onChange={handleArticleChange}></input>
             <input type="text" name="heading" value={reviews.heading} placeholder="headings" onChange={handleReviewChange}></input>
@@ -57,4 +58,4 @@ function AddReview() {
     )
 }
 
-export default AddReview;
+export default EditReview;

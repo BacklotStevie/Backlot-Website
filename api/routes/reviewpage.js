@@ -23,4 +23,15 @@ app.get("/review/:id", (req, res) => {
         });
 });
 
+app.put("/review/:id", (req, res) => {
+    console.log(req.body)
+    Review.findByIdAndUpdate(req.params.id, req.body)
+        .then((oldReview) => {
+            res.send("okay")
+        })
+        .catch((err) => {
+            res.status(500).send("Oops");
+        });
+});
+
 module.exports = app

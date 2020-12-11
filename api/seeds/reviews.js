@@ -12,7 +12,7 @@ const reviews = [
                 info: "First and foremost, we’d like to apologize to our fans for our unannounced absence. After taking some time off to re-evaluate where we wanted to take Backlot, we realized we needed a complete re-vamp of our website, culture and mission statement. Inside the Backlot (formerly known as Backlot Review), is no longer just a film review website. No longer is this a website where all our content will be long, thought-out reviews on the latest films in Hollywood and television. Inside the Backlot is something much bigger than that. Inside the Backlot is a community. A place for cinephiles and filmmakers to connect and interact with one another. Our goal here at the Backlot is to expose the public to new films and up-and-coming filmmakers looking to leave their mark on the industry. Here at the Backlot, you are joined by hundreds of other people who share the same passion and interests as you – film and all it’s components. This is a hub for filmmakers, film critics and film lovers to come together and discuss new ideas, the latest trends and their favorite movies with one another. Inside the Backlot is proud to introduce The Backlot Podcast Network. Here, you will find the first two introductions to the network with Inside the Backlot’s first two podcasts: Backlot Review and The Stream Exchange. Backlot Review will be a weekly film podcast where co-hosts Steven Sarria and Nick Sarmiento discuss that week’s big theatrical release. The Stream Exchange will be more television-oriented: a podcast where co-hosts Steven Sarria and Remy Sallinger each choose a season of television that the other is forced to watch, and discuss them episode-by-episode. Inside the Backlot will continue to produce written articles, and look to release videos in the near-future. These videos will include behind-the-scenes looks at various Miami-based film festivals and interviews with local up-and-coming directors, producers and actors. As Backlot continues to grow, we look for young aspiring filmmakers to grow with us. As our platform continues to grow and our reach continues to expand, Backlot wants to partner with aspiring filmmakers to give them a platform to preview their films and projects. For many, film is a hobby. For some, film is a passion. Though one thing is certain: film is art, and like any art, it’s a way to get your voice heard. Here are our voices. Welcome to Inside the Backlot."
             }
         ],
-        image: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
+        img: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
     },
     {
         title: "5 Questions We Still Have After the Series Finale of Game of Thrones",
@@ -39,7 +39,7 @@ const reviews = [
                 info: "After Jon killed Daenerys he has a confrontation with Drogon. Out of anger and pain Drogon melts down the Iron Throne instead of roasting Jon. We then see him pick up Dany and fly away never to be seen again by the viewer, although later in the show we see Sam tell Bran that he was last seen flying east. Bran then hints at being able to find him, maybe Bran will be able to control Drogon now? Either way, there is still a dragon out on the loose in Westeros and let’s just hope he isn’t out there burning down villages and eating people."
             }
         ],
-        image: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
+        img: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
     },
     {
         title: "John Wick 3 Continues to Build Upon An Already Great Series",
@@ -77,7 +77,7 @@ const reviews = [
                 heading: "Final score: 4 out of 5."
             }
         ],
-        image: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
+        img: "https://insidethebacklothome.files.wordpress.com/2019/05/cropped-detpikachunewheader-1.jpg"
     }
 ]
 

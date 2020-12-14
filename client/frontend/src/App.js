@@ -7,16 +7,17 @@ import IndividualReview from '../src/Components/individualreview'
 import { Route } from 'react-router-dom'
 import EditReview from '../src/Components/editreview'
 import Footer from '../src/Components/footer';
+import Page1 from '../src/Page1'
 import Page2 from '../src/Page2'
 
 function App(props) {
   return (
     <>
       <Header />
-      <AddReview />
+      {/* <AddReview /> */}
       {/* <ReviewPage /> */}
 
-      
+      <Route exact path="/home" render={(props) => <Page1 {...props} />} />
       <Route exact path="/reviews" render={(props) => <Page2 {...props} />} />
       
       <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />

@@ -42,8 +42,47 @@
   margin: 0 .3rem;
 }
 
-.stories{
-  width: 25rem;
+.jumbotron{
+  
+  margin: 2rem !important;
+}
+
+.container{
+  font-size: .5rem;
+}
+
+/* .container h1{
+  margin-top: 1rem;
+  
+} */
+
+.review-contianer{
+  /* padding-left: 5rem !important; // for web */
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+
+.story {
+  margin: .5rem !important;
+  border: red 1px solid;
+  height: 8rem;
+  
+}
+
+.story-info{
+
+}
+
+.story-info h1,
+.story-info h4 { 
+  font-size: .8rem;
+  margin-right: .5rem;
+}
+
+.featured-jumbo {
+  width: 8rem;
+  height: 10rem;
   
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../src/Components/header';
 import ReviewPage from '../src/Components/reviewpage'
 
 const Page2 = () => {

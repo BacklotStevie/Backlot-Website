@@ -32,7 +32,7 @@ const IndividualReview = (props) => {
     const ShowIndividual = () => {
 
         return (
-            <div className="reviews">
+            <div className="">
                 <div>
                     <h1>{individual?.title}</h1>
                     <h4>{individual?.writer}</h4>

@@ -77,10 +77,9 @@
 }
 
 .story {
-  margin: .5rem !important;
   border: red 1px solid;
   height: 8rem;
-  
+  box-sizing: border-box;
 }
 
 .story-info{

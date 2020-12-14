@@ -77,13 +77,17 @@
 }
 
 .story {
-  border: red 1px solid;
+  
   height: 8rem;
   box-sizing: border-box;
+  
 }
 
 .story-info{
-
+  border: red 1px solid;
+  width: 10rem;
+  height: 6rem;
+  margin-top: 1rem;
 }
 
 .story-info h1,

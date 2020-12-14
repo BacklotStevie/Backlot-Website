@@ -20,10 +20,13 @@ const ReviewPage = () => {
             return (
                 <div className="story col-xs-12 col-sm-4">
                     <div className="story-info">
-                        <Link to={`/reviews/${review._id}`}><h1>{review.title}</h1></Link>
-                        <h4>{review.writer}</h4>
-                    </div>
+                        <div>
+                            <Link to={`/reviews/${review._id}`}><h1>{review.title}</h1></Link>
+                            <h4>{review.writer}</h4>
+                        </div>
 
+                    </div>
+                    
                     {/* <div>
                             {review.reviews?.map((nestedReview) =>
                                 <>

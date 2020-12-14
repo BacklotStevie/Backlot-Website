@@ -1,14 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Header = () => {
     return (
         <>
-            <nav className='navbar bg-dark'>
-                <div className=''>
-                    <a href="#" className='navbar-brand'>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar.Brand href="#home">
+                    {/* <Logo
+                    alt=""
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    />
+                    Dice Roller */}
+                    <Link to="/home">
                         <h3>B</h3>
-                    </a>
+                    </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ml-auto text-right">
+                        <Link to="/reviews"><Nav.Link href="#reviews">Film Reviews</Nav.Link></Link>
+                        <Nav.Link href="#podcast">Podcast</Nav.Link>
+                        <Nav.Link href="#videos">Videos</Nav.Link>
+                        <Nav.Link href="#team">Team</Nav.Link>
+                        <Nav.Link href="#aboutus">About Us</Nav.Link>
+                        <Nav.Link href="#signup">Sign Up</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+            {/* <nav className='navbar bg-dark'>
+                <div className=''>
+                    <Link to="/home">
+                        <h3>B</h3>
+                    </Link>
                 </div>
                 <div className=''>
                     <ul className='d-flex list-unstyled text-white nav-options'>
@@ -19,7 +45,7 @@ const Header = () => {
                         <li className='nav-options'>About Us</li>
                     </ul>
                 </div>
-            </nav >
+            </nav > */}
         </>
     );
 };

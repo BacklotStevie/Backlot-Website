@@ -32,23 +32,25 @@ const IndividualReview = (props) => {
     const ShowIndividual = () => {
 
         return (
-            <div className="">
-                <div>
+            <div className="m-4">
+                <div className="story-title m-3">
                     <h1>{individual?.title}</h1>
-                    <h4>{individual?.writer}</h4>
+                    <h4 className="mb-5">{individual?.writer}</h4>
                 </div>
-
-                <div>
+                <div className="review-img">
+                    <img className="story-img m-auto" src={individual?.img} alt='image'/>
+                </div>
+                <div className="story-text">
                     {individual?.reviews?.map((nestedInfo) =>
                         <>
-                            <h3>{nestedInfo.heading}</h3>
-                            <p>{nestedInfo.info}</p>
+                            <h3 className="mt-5">{nestedInfo.heading}</h3>
+                            <p className="m-3">{nestedInfo.info}</p>
                         </>
                     )}
                 </div>
 
-                <div>
-                    <Link to={`/reviews/edit/${individual._id}`}>Edit</Link>
+                <div className="text-center">
+                    <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
                     <button onClick={handleOnClick}>Delete</button>
                 </div>
             </div>
@@ -56,8 +58,10 @@ const IndividualReview = (props) => {
     }
 
     return (
-        <div>
-            <ShowIndividual />
+        <div className="container">
+            <div className="row">
+                <ShowIndividual />
+            </div>
         </div>
     );
 };

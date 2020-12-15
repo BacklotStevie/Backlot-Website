@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import Logo from './backlot-logo.png'
 
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className="mr-2 ml-2">
                 <Navbar.Brand href="#home">
                     {/* <Logo
                     alt=""
@@ -15,7 +16,7 @@ const Header = () => {
                     />
                     Dice Roller */}
                     <Link to="/home">
-                        <h3>B</h3>
+                        <img className="logo" src={Logo} alt='logo'/>
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

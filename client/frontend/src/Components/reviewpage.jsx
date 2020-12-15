@@ -18,13 +18,13 @@ const ReviewPage = () => {
     const ShowReviews = () => {
         return reviews && reviews.map((review) => {
             return (
-                <div className="story col-xs-12 col-sm-4">
-                    <div className="story-info">
-                        <div>
+                <div className="story col-12 col-sm-4">
+                    <div className="story-info card">
+                    <img className="card-img " src={review.img} alt="card"/>
+                        <div className="card-img-overlay">
                             <Link to={`/reviews/${review._id}`}><h1>{review.title}</h1></Link>
                             <h4>{review.writer}</h4>
                         </div>
-
                     </div>
                     
                     {/* <div>
@@ -35,16 +35,16 @@ const ReviewPage = () => {
                                 </>
                             )}
                         </div> */}
-
-
                 </div>
+
+                
             )
         })
     }
 
     return (
-        <div className="container-fluid">
-            <div className="review-contianer row">
+        <div className="container-fluid p-4">
+            <div className="review-contianer row ">
                 <ShowReviews />
             </div>
         </div>

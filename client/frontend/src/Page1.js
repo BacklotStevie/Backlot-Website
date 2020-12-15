@@ -2,13 +2,14 @@ import React from 'react';
 import ReviewPage from '../src/Components/reviewpage';
 import { CardDeck } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
+import Logo from './Components/backlot-logo.png'
 
 const Page1 = () => {
     return (
-        <div>
-            <div className="row jumbotron jumbotron-fluid">
+        <div className="container">
+            <div className="row jumbotron col-12 m-1 mt-5 mb-5">
                 <div className='col-6'>
-                    <img className="featured-jumbo" src="https://cdn.logo.com/hotlink-ok/logo-social.png" />
+                    <img className="featured-jumbo" src={Logo} />
                 </div>
                 <div className="container col-6">
 
@@ -19,9 +20,9 @@ const Page1 = () => {
 
             <h3 className="text-center sections">PODCASTS</h3>
 
-            <CardDeck className="podcasts">
+            <CardDeck className="podcasts pb-3">
                 <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Img variant="top" src="https://turbologo.com/articles/wp-content/uploads/2019/10/youtube-logo-illustration-1280x720.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -34,7 +35,7 @@ const Page1 = () => {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Img variant="top" src="https://turbologo.com/articles/wp-content/uploads/2019/10/youtube-logo-illustration-1280x720.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -47,7 +48,7 @@ const Page1 = () => {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Img variant="top" src="https://turbologo.com/articles/wp-content/uploads/2019/10/youtube-logo-illustration-1280x720.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>

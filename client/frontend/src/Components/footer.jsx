@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className="footer row text-center bg-dark text-white ml-2 mr-2">
+        <div className="footer row text-center bg-dark text-white ml-2 mr-2 mt-5">
             <div className="col-12 col-md-4 mt-5 mb-5 border border-white border-top-0 border-bottom-0 border-left-0">
                 <h4 class="services-footer">Services</h4>
                 <p className=''>Inside the Backlot is your premiere film website. With everything from film reviews, podcasts and short films, here at Backlot we strive to create the ideal film community for film lovers everywhere.</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <li>Romance</li>
                         <li>Sci-Fi</li>
                     </ul>
-                
+
                     <h4>Where to Listen</h4>
                     <ul className='list-unstyled'>
                         <li><a href="//podcasts.apple.com/us/podcast/inside-the-backlot/id1460214563">Apple Podcasts</a></li>

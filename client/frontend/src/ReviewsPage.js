@@ -1,7 +1,7 @@
 import React from 'react';
-import ReviewPage from '../src/Components/reviewpage'
+import ReviewPage from './Components/reviewpage'
 
-const Page2 = () => {
+const ReviewsPage = () => {
     return (
         <div>
         
@@ -12,4 +12,4 @@ const Page2 = () => {
     );
 };
 
-export default Page2;
+export default ReviewsPage;

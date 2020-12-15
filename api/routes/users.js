@@ -3,6 +3,18 @@ const app = express();
 const User = require("../models/UsersSchema");
 var jwt = require("jsonwebtoken");
 
+
+app.get("/users", (req, res) => {
+
+    User.find()
+        .then((user) => {
+            res.json(user)
+        })
+        .catch((err) => {
+            res.status(500), json({ message: "Oops" })
+        })
+});
+
 app.post("/signup", (req, res) => {
     User.create({
         email: req.body.email,

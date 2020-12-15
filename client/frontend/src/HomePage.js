@@ -1,10 +1,10 @@
 import React from 'react';
-import ReviewPage from '../src/Components/reviewpage';
+import ReviewPage from './Components/reviewpage';
 import { CardDeck } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import Logo from './Components/backlot-logo.png'
 
-const Page1 = () => {
+const HomePage = () => {
     return (
         <div className="container">
             <div className="row jumbotron col-12 m-1 mt-5 mb-5">
@@ -72,4 +72,4 @@ const Page1 = () => {
     );
 };
 
-export default Page1;
+export default HomePage;

@@ -16,7 +16,7 @@ const Header = () => {
                     />
                     Dice Roller */}
                     <Link to="/home">
-                        <img className="logo" src={Logo} alt='logo'/>
+                        <img className="logo" src={Logo} alt='logo' />
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -24,7 +24,7 @@ const Header = () => {
                     <Nav className="ml-auto text-right">
                         <Link to="/reviews"><Nav.Link href="#reviews">Film Reviews</Nav.Link></Link>
                         <Nav.Link href="#podcast">Podcast</Nav.Link>
-                        <Nav.Link href="#videos">Videos</Nav.Link>
+                        <Link to="/videopage"><Nav.Link href="#videos">Videos</Nav.Link></Link>
                         <Nav.Link href="#team">Team</Nav.Link>
                         <Nav.Link href="#aboutus">About Us</Nav.Link>
                         <Link to="/signup"><Nav.Link href="#signup">Sign Up</Nav.Link></Link>

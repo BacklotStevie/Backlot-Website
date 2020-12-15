@@ -18,15 +18,15 @@ const ReviewPage = () => {
     const ShowReviews = () => {
         return reviews && reviews.map((review) => {
             return (
-                <div className="story col-12 col-sm-4">
+                <div className="story col-12 col-sm-4 mb-4">
                     <div className="story-info card">
-                    <img className="card-img " src={review.img} alt="card"/>
+                        <img className="card-img " src={review.img} alt="card" />
                         <div className="card-img-overlay">
                             <Link to={`/reviews/${review._id}`}><h1>{review.title}</h1></Link>
                             <h4>{review.writer}</h4>
                         </div>
                     </div>
-                    
+
                     {/* <div>
                             {review.reviews?.map((nestedReview) =>
                                 <>
@@ -37,7 +37,7 @@ const ReviewPage = () => {
                         </div> */}
                 </div>
 
-                
+
             )
         })
     }

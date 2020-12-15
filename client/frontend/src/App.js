@@ -19,7 +19,7 @@ function App(props) {
 
       <Route exact path="/home" render={(props) => <Page1 {...props} />} />
       <Route exact path="/reviews" render={(props) => <Page2 {...props} />} />
-      
+
       <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />
       <Route exact path="/reviews/edit/:id" render={(props) => <EditReview {...props} />} />
       <Footer />

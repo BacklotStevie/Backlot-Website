@@ -25,8 +25,8 @@ const Header = () => {
                         <Link to="/reviews"><Nav.Link href="#reviews">Film Reviews</Nav.Link></Link>
                         <Nav.Link href="#podcast">Podcast</Nav.Link>
                         <Link to="/videopage"><Nav.Link href="#videos">Videos</Nav.Link></Link>
-                        <Nav.Link href="#team">Team</Nav.Link>
-                        <Nav.Link href="#aboutus">About Us</Nav.Link>
+                        <Link to="/teampage"><Nav.Link href="#team">Team</Nav.Link></Link>
+                        <Link to="/aboutus"><Nav.Link href="#aboutus">About Us</Nav.Link></Link>
                         <Link to="/signup"><Nav.Link href="#signup">Sign Up</Nav.Link></Link>
                     </Nav>
                 </Navbar.Collapse>

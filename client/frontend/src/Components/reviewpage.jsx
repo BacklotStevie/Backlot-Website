@@ -44,7 +44,7 @@ const ReviewPage = () => {
 
     return (
         <div className="container-fluid p-4">
-            <div className="review-contianer row ">
+            <div className="row">
                 <ShowReviews />
             </div>
         </div>

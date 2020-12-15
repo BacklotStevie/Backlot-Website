@@ -11,6 +11,8 @@ import Adduser from '../src/Components/adduser'
 import HomePage from '../src/HomePage'
 import ReviewsPage from '../src/ReviewsPage'
 import VideoPage from './VideoPage';
+import AboutUs from './AboutUs';
+import TeamPage from './teampage';
 
 function App(props) {
   return (
@@ -26,6 +28,8 @@ function App(props) {
       <Route exact path="/reviews/edit/:id" render={(props) => <EditReview {...props} />} />
       <Route exact path="/signup" render={(props) => <Adduser {...props} />} />
       <Route exact path="/videopage" render={(props) => <VideoPage {...props} />} />
+      <Route exact path="/aboutus" render={(props) => <AboutUs {...props} />} />
+      <Route exact path="/teampage" render={(props) => <TeamPage {...props} />} />
       <Footer />
     </>
   );

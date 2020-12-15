@@ -3,12 +3,12 @@ import ReviewPage from './Components/reviewpage'
 
 const ReviewsPage = () => {
     return (
-        <div>
-        
-            <ReviewPage/>
-            
+        <div className="container-fluid p-4">
+            <div className="row review-container">
+                <ReviewPage />
+            </div>
         </div>
-        
+
     );
 };
 

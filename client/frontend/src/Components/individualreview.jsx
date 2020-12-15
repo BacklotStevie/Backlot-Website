@@ -38,7 +38,7 @@ const IndividualReview = (props) => {
                     <h4 className="mb-5">{individual?.writer}</h4>
                 </div>
                 <div className="review-img">
-                    <img className="story-img m-auto" src={individual?.img} alt='image'/>
+                    <img className="story-img m-auto" src={individual?.img} alt='image' />
                 </div>
                 <div className="story-text">
                     {individual?.reviews?.map((nestedInfo) =>

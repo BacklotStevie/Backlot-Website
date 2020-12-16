@@ -6,7 +6,7 @@ import Logo from './backlot-logo.png'
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className="mr-2 ml-2">
+            <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className="mr-5 ml-5">
                 <Navbar.Brand href="#home">
                     {/* <Logo
                     alt=""

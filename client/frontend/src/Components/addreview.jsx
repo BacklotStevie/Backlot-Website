@@ -36,13 +36,32 @@ function AddReview() {
         }
 
         event.preventDefault();
-        axios.post("http://localhost:3000/writeReview", combined)
-            .then((res) => {
-                console.log(res)
+        var config = {
+            method: 'post',
+            url: 'http://localhost:3000/writeReview',
+            headers: { 
+            'Authorization': `Bearer ${localStorage.getItem("token")}`, 
+            'Content-Type': 'application/json'
+            },
+            data :  { combined }
+        };
+        axios(config)
+            .then((response) => {
+            debugger;
             })
             .catch((error) => {
-                console.log(error)
-            })
+            debugger;
+            });
+          
+
+
+        // axios.post("http://localhost:3000/writeReview", combined)
+        //     .then((res) => {
+        //         console.log(res)
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
     }
 
     return (

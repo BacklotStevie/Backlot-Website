@@ -4,6 +4,12 @@ const app = express();
 const mongoose = require("mongoose");
 const Review = require("./models/ReviewsSchema")
 const bodyParser = require("body-parser");
+var jwt = require("jsonwebtoken");
+
+
+
+require ('dotenv').config();
+
 app.use(cors())
 app.options('*', cors()) // include before other routes
 
@@ -32,7 +38,12 @@ app.use("/auth", require("./routes/users"))
 app.use("/", require("./routes/reviewpage"))
 
 app.post("/writeReview", (req, res) => {
-    console.log(req.body);
+    console.log("AUTHORIZATION HEADER", req.headers.authorization)
+
+    let token = req.headers.authorization.split(" ")[1]
+    var decoded = jwt.verify(token, 'shhhh');
+
+    console.log("DECODED", decoded)
     Review.create(req.body)
         .then((insertedReview) => {
             res.send("review inserted")

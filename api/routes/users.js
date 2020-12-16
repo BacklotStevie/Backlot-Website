@@ -33,7 +33,7 @@ app.post("/login", (req, res) => {
         .then((user) => {
             if (!user) res.status(403).send("Invalid credentials");
             else if (user.password === req.body.password) {
-                var token = jwt.sign({ id: 'user._id' }, 'shhhh')
+                var token = jwt.sign({ id: user._id }, 'shhhh')
                 res.json({ token: token })
             }
             else {

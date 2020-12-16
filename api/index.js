@@ -9,13 +9,16 @@ var jwt = require("jsonwebtoken");
 
 
 require ('dotenv').config();
-
 app.use(cors())
 app.options('*', cors()) // include before other routes
 
 //Nodemon file
 mongoose
-    .connect("mongodb://localhost/final-project", { useNewUrlParser: true })
+    .connect("mongodb://localhost/final-project", { 
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true, 
+    })
     .then((x) => {
         console.log(
             `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -40,7 +43,7 @@ app.use("/", require("./routes/reviewpage"))
 app.post("/writeReview", (req, res) => {
     console.log("AUTHORIZATION HEADER", req.headers.authorization)
 
-    let token = req.headers.authorization.split(" ")[1]
+    let token = req.headers.authorization
     var decoded = jwt.verify(token, 'shhhh');
 
     console.log("DECODED", decoded)

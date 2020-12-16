@@ -20,9 +20,13 @@ const HomePage = () => {
                 </div>
             </div>
 
+            <div className="container section-divider pt-5">
+                <button className="divider-button bg-dark" disabled></button>
+            </div>
+
             <h3 className="text-center sections">PODCASTS</h3>
 
-            <CardDeck className="podcasts pb-3">
+            <CardDeck className="podcasts pb-5">
                 <Card className='podcast-card'>
                     <Card.Img variant="top" src={Disney} />
                     <Card.Body>
@@ -61,6 +65,9 @@ const HomePage = () => {
                 </Card>
             </CardDeck>
 
+            <div className="container section-divider">
+                <button className="divider-button bg-dark" disabled></button>
+            </div>
 
             <h3 className="text-center sections">BLOG POSTS</h3>
 

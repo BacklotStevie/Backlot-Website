@@ -60,9 +60,28 @@
   font-size: .5rem;
 }
 
+.section-title-overline {
+  border-top: 6px solid #a68555;
+  width: 2rem;
+  border-radius: 4px;
+  align-self: center;
+  margin: 0 0 .5rem;
+}
+
+.section-divider {
+  display: flex;
+  justify-content: center;
+}
+
+.divider-button {
+  width: 2.5rem;
+  height: .7rem;
+  border-radius: 100px;
+  border-color: rgb(32, 32, 32);
+}
 
 .sections{
-  border-top: black 1px solid;
+  /* border-top: black 1px solid; */
   margin: 0 4rem;
   padding: 1rem;
 }

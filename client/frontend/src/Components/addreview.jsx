@@ -8,10 +8,10 @@ function AddReview() {
         img: "",
     })
 
-    const [reviews, setReviews] = useState({
+    const [reviews, setReviews] = useState([{
         heading: "",
         info: "",
-    })
+    }])
 
     function handleArticleChange(event) {
         setArticle({
@@ -20,11 +20,12 @@ function AddReview() {
         })
     }
 
-    function handleReviewChange(event) {
-        setReviews({
-            ...reviews,
-            [event.target.name]: event.target.value
-        })
+    function handleReviewChange(event, index) {
+        let reviewsCp = [...reviews];
+        let reviewCp = { ...reviews[index] }
+        reviewCp[event.target.name] = event.target.value
+        reviewsCp[index] = reviewCp
+        setReviews(reviewsCp)
     }
 
 
@@ -44,13 +45,27 @@ function AddReview() {
                 console.log(error)
             })
     }
+    function addAnotherReview() {
+        let reviewsCp = [...reviews];
+        reviewsCp.push({ heading: "", info: "" })
+        setReviews(reviewsCp)
+    }
 
+    function removeAReview(index) {
+
+    }
     return (
-        <form onSubmit={addReviewHandler}>
+        <form onClick={addReviewHandler}>
             <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
             <input type="text" name="writer" value={article.writer} placeholder="writer" onChange={handleArticleChange}></input>
-            <input type="text" name="heading" value={reviews.heading} placeholder="headings" onChange={handleReviewChange}></input>
-            <input type="text" name="info" value={reviews.info} placeholder="body text" onChange={handleReviewChange}></input>
+
+            {reviews.map((review, index) => <>
+                <input type="text" name="heading" value={reviews.heading} placeholder="headings" onChange={(e) => handleReviewChange(e, index)}></input>
+                <input type="text" name="info" value={reviews.info} placeholder="body text" onChange={(e) => handleReviewChange(e, index)}></input>
+                <button>Remove</button>
+            </>)}
+
+            <button onClick={addAnotherReview}>Add Another Review</button>
             <input type="text" name="img" value={article.img} placeholder="images" onChange={handleArticleChange}></input>
             <button type="submit">Submit</button>
         </form>

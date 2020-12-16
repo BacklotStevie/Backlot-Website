@@ -19,7 +19,7 @@ function App(props) {
   return (
     <>
       <Header />
-      <AddReview />
+      {/* <AddReview /> */}
 
 
       <Route exact path="/home" render={(props) => <HomePage {...props} />} />

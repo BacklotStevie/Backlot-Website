@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "cd API && npm start",
-        "install": "cd API && npm i",
+        "start": "cd api && npm start",
+        "install": "cd api && npm i",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

@@ -38,9 +38,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="mission-footer col-12 col-md-4 mt-5 mb-5">
+            <div className=" mission-footer col-12 col-md-4 mt-5 mb-5">
                 <h1>Contact Us</h1>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIG0g4jzqFriJ0-zQ0EMsrDAaXPUIj183O0f5hF0Qt15foCg/viewform?embedded=true" width="400" height="403" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIG0g4jzqFriJ0-zQ0EMsrDAaXPUIj183O0f5hF0Qt15foCg/viewform?embedded=true" className="footer-form" width="400" height="470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </div>
     );

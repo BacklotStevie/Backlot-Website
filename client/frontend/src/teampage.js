@@ -9,7 +9,7 @@ const TeamPage = () => {
                 <div className="col-12 col-sm-6 mb-5">
                     <CardDeck className="podcasts">
                         <Card className='podcast-card'>
-                            <Card.Img className='about-pics' width="100%" variant="top" src="https://lh3.googleusercontent.com/proxy/Os8g7gqLoad7nplCLb4dovyPFYWjnVz7VGF8gFR4CAW8O-ok63Fps2ZznbNIBxnnaM1EUt2NcxE377WDhjOLPcIw9E49mrWZpMdGJdIBArQvmK6SVvhyIeZrHzp_2RwGdj8y4Q-vHQ" />
+                            <Card.Img className='about-pics' width="100%" variant="top" src="https://lh3.googleusercontent.com/proxy/J0jn_5SBXsxMAApGr5tSwTNL1c4owOMqiTIpJQsFULP7OqDgLqjYtooSpiYRcC5kb1KCxeRnIqHcac5n8-AgvNolyGtaQNn-JNxXYJLq4ZxDx6HgeMV_jYCC8X0reXfGtL3oUrSwBw" />
                             <Card.Body className="">
                                 <Card.Title className="text-center mb-3"><h3>Steven Sarria</h3><br /><h6><i>Co-Host, Editor, Founder</i></h6></Card.Title>
                                 <Card.Text className="podcast-text">

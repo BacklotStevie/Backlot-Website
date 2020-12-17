@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className="container">
             <div className="jumbotron bg-medium col-12 m-1 mt-5 mb-5">
                 <div className=''>
-                    <img className="featured-jumbo pl-5 ml-5 mt-3 mb-3" src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/6210937530001/a5814f4b-5bea-4879-a34b-b57989377adb/00b3c7bc-40f0-48ba-94de-3516dc250297/1280x720/match/image.jpg" />
+                    <img className="featured-jumbo mb-3" src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/6210937530001/a5814f4b-5bea-4879-a34b-b57989377adb/00b3c7bc-40f0-48ba-94de-3516dc250297/1280x720/match/image.jpg" />
                 </div>
                 <div className="container">
 

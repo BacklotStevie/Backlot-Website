@@ -10,14 +10,15 @@ import Mando from '../src/mando.jpg'
 const HomePage = () => {
     return (
         <div className="container">
-            <div className="jumbotron bg-medium col-12 m-1 mt-5 mb-5">
-                <div className=''>
-                    <img className="featured-jumbo mb-3" src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/6210937530001/a5814f4b-5bea-4879-a34b-b57989377adb/00b3c7bc-40f0-48ba-94de-3516dc250297/1280x720/match/image.jpg" />
-                </div>
-                <div className="container">
-
-                    <h1 className="display-5 text-black">Disney Investor Day Mayhem</h1>
-                    <p className="lead text-black">John and Steven discuss the madness of Disney Investor Day.<br /><br /><a href='https://podcasts.apple.com/us/podcast/disney-investor-day-mayhem/id1460214563?i=1000502128805'>Listen on Apple Podcasts</a><br /><a href='https://open.spotify.com/episode/1DePsWGat43dXBHpJ6Lvlt?si=0fH73pHKS7GRMLWKVCEnDw'>Listen on Spotify</a></p>
+            <div className="row">
+                <div className="jumbotron d-flex col-12 align-items-center bg-medium mt-4">
+                    <div className="mb-5">
+                        <img className="featured-jumbo" src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/6210937530001/a5814f4b-5bea-4879-a34b-b57989377adb/00b3c7bc-40f0-48ba-94de-3516dc250297/1280x720/match/image.jpg" />
+                    </div>
+                    <div className="">
+                        <h1 className="display-5 text-black ml-4">Disney Investor Day Mayhem</h1>
+                        <p className="lead text-black ml-4">John and Steven discuss the madness of Disney Investor Day.<br /><br /><a href='https://podcasts.apple.com/us/podcast/disney-investor-day-mayhem/id1460214563?i=1000502128805'>Listen on Apple Podcasts</a><br /><a href='https://open.spotify.com/episode/1DePsWGat43dXBHpJ6Lvlt?si=0fH73pHKS7GRMLWKVCEnDw'>Listen on Spotify</a></p>
+                    </div>
                 </div>
             </div>
 

@@ -5,8 +5,8 @@ import { Card } from 'react-bootstrap';
 const TeamPage = () => {
     return (
         <div className="container">
-            <div className="row mb-5 col-12 about-cards">
-                <div className="col-12 col-sm-6 mb-5">
+            <div className="row about-cards">
+                <div className="col-12 col-sm-6 mb-5 about-card">
                     <CardDeck className="podcasts">
                         <Card className='podcast-card'>
                             <Card.Img className='about-pics' width="100%" variant="top" src="https://lh3.googleusercontent.com/proxy/J0jn_5SBXsxMAApGr5tSwTNL1c4owOMqiTIpJQsFULP7OqDgLqjYtooSpiYRcC5kb1KCxeRnIqHcac5n8-AgvNolyGtaQNn-JNxXYJLq4ZxDx6HgeMV_jYCC8X0reXfGtL3oUrSwBw" />
@@ -28,7 +28,7 @@ const TeamPage = () => {
                     </CardDeck>
                 </div>
 
-                <div className="col-12 col-sm-6 mb-5">
+                <div className="col-12 col-sm-6 mb-5 about-card">
                     <CardDeck className="podcasts">
                         <Card className='podcast-card'>
                             <Card.Img className='about-pics' width="100%" variant="top" src="http://backlotreview.com/assets/images/photo4967873253083293978-600x747.jpg" />

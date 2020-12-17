@@ -192,20 +192,20 @@ element.style {
 }
 
 @media (min-width: 400px){
-  .jumbotron{
+  /* .jumbotron{
     display: flex;
-  }
-  
+  } */
+
   .review-container{
     /*padding-left: 5rem !important; // for web */
     padding-left: 15rem;
     padding-right: 15rem;
   } 
     
-  .about-cards {
+  /* .about-cards {
     height: 62rem;
     width: 20rem;
-  }
+  } */
 
   .podcast-card {
     height: 33rem;
@@ -236,8 +236,12 @@ element.style {
   margin-left: 5rem;
 }
 
+.about-card {
+  height: 50rem;
+}
+
 .about-cards {
-  width: 23.5rem;
+  height: 100rem;
 }
 
 .socials-about {

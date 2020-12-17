@@ -14,7 +14,7 @@ app.options('*', cors()) // include before other routes
 
 //Nodemon file
 mongoose
-    .connect("mongodb://localhost/final-project", {
+    .connect(process.env.DB_URL, {
         useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,

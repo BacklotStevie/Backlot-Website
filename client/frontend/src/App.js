@@ -14,6 +14,7 @@ import VideoPage from './VideoPage';
 import AboutUs from './AboutUs';
 import PodcastPage from './podcastpage'
 import TeamPage from './teampage'
+import Login from "./Components/login"
 
 function App(props) {
   return (
@@ -28,6 +29,7 @@ function App(props) {
       <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />
       <Route exact path="/reviews/edit/:id" render={(props) => <EditReview {...props} />} />
       <Route exact path="/signup" render={(props) => <Adduser {...props} />} />
+      <Route exact path="/login" render={(props) => <Login {...props} />} />
       <Route exact path="/videopage" render={(props) => <VideoPage {...props} />} />
       <Route exact path="/aboutus" render={(props) => <AboutUs {...props} />} />
       <Route exact path="/podcastpage" render={(props) => <PodcastPage {...props} />} />

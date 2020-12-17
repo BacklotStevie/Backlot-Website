@@ -33,7 +33,7 @@ function EditReview(props) {
     useEffect(() => {
         axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
             .then((response) => {
-                debugger
+                
                 setArticle(response.data)
                 setReviews(response.data.reviews)
             })
@@ -43,7 +43,7 @@ function EditReview(props) {
     }, [])
 
     function editReviewHandler(event) {
-        debugger
+        
         let combined = {
             ...article,
             reviews: reviews

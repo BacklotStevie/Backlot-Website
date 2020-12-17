@@ -30,7 +30,7 @@ function AddReview() {
 
 
     function addReviewHandler(event) {
-        debugger
+        
         let combined = {
             ...article,
             reviews: reviews
@@ -48,10 +48,10 @@ function AddReview() {
         };
         axios(config)
             .then((response) => {
-            debugger;
+            
             })
             .catch((error) => {
-            debugger;
+            
             });
           
 

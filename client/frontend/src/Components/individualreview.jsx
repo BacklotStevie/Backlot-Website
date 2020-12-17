@@ -1,22 +1,24 @@
 import React from 'react';
 import axios from 'axios';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from "react";
+import { userContext } from "../context/UserCtx";
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 
 const IndividualReview = (props) => {
+    const { user } = useContext(userContext);
     const [individual, setIndividual] = useState(false)
     const history = useHistory()
 
     useEffect(() => {
         axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
             .then((res) => {
-                debugger
+                
                 console.log(res.data)
                 setIndividual(res.data)
             })
     }, [])
-    debugger
+    
 
     const handleOnClick = () => {
         axios.delete(`http://localhost:3000/reviews/${props.match.params.id}`)
@@ -28,7 +30,7 @@ const IndividualReview = (props) => {
                 console.log(error)
             })
     }
-
+console.log(user)
     const ShowIndividual = () => {
 
         return (
@@ -48,11 +50,13 @@ const IndividualReview = (props) => {
                         </>
                     )}
                 </div>
-
-                <div className="text-center">
-                    <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
-                    <button onClick={handleOnClick}>Delete</button>
-                </div>
+                {user.userType === "admin" ?(
+                    <div className="text-center">
+                        <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
+                        <button onClick={handleOnClick}>Delete</button>
+                    </div>
+                ) : null}
+                
             </div>
         )
     }

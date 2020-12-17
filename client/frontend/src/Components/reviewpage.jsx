@@ -9,12 +9,12 @@ const ReviewPage = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/reviews')
             .then((res) => {
-                debugger
+                
                 console.log(res.data)
                 setReviews(res.data)
             })
     }, [])
-    debugger
+    
     const ShowReviews = () => {
         return reviews && reviews.map((review) => {
             return (

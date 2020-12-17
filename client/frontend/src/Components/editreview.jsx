@@ -31,9 +31,9 @@ function EditReview(props) {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
+        axios.get(`${process.env.REACT_APP_API_BASE_URL}/reviews/${props.match.params.id}`)
             .then((response) => {
-                
+
                 setArticle(response.data)
                 setReviews(response.data.reviews)
             })
@@ -43,7 +43,7 @@ function EditReview(props) {
     }, [])
 
     function editReviewHandler(event) {
-        
+
         let combined = {
             ...article,
             reviews: reviews
@@ -51,7 +51,7 @@ function EditReview(props) {
 
 
         event.preventDefault();
-        axios.put(`http://localhost:3000/reviews/${props.match.params.id}`, combined)
+        axios.put(`${process.env.REACT_APP_API_BASE_URL}/reviews/${props.match.params.id}`, combined)
             .then((res) => {
                 console.log(res)
             })

@@ -13,20 +13,20 @@ const Login = () => {
         email: "",
         password: ""
     });
-    
-    
+
+
     function handleUserChange(event) {
         setUsername({
             ...username,
             [event.target.name]: event.target.value
         })
     }
-    
+
     function loginUserHandler(event) {
         debugger
 
         event.preventDefault();
-        axios.post("http://localhost:3000/auth/login",username)
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, username)
             .then((res) => {
                 console.log(res)
                 setUser(res.data.user);
@@ -37,18 +37,18 @@ const Login = () => {
                 console.log(error)
             })
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     return (
         <div className="container">
             <div className="row">
                 <form onSubmit={loginUserHandler}>
                     <input className="col-12" type="text" name="email" value={username.email} placeholder="Email" onChange={handleUserChange}></input>
                     <input className="col-12" type="text" name="password" value={username.password} placeholder="Username" onChange={handleUserChange}></input>
-                    
+
 
                     <button type="submit">Submit</button>
                 </form>

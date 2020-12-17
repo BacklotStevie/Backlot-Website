@@ -30,7 +30,7 @@ function AddReview() {
 
 
     function addReviewHandler(event) {
-        
+
         let combined = {
             ...article,
             reviews: reviews
@@ -39,30 +39,21 @@ function AddReview() {
         event.preventDefault();
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/writeReview',
-            headers: { 
-            'Authorization': `Bearer ${localStorage.getItem("token")}`, 
-            'Content-Type': 'application/json'
+            url: `${process.env.REACT_APP_API_BASE_URL}/writeReview`,
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+                'Content-Type': 'application/json'
             },
-            data :  { combined }
+            data: { combined }
         };
         axios(config)
             .then((response) => {
-            
+
             })
             .catch((error) => {
-            
+
             });
-          
 
-
-        // axios.post("http://localhost:3000/writeReview", combined)
-        //     .then((res) => {
-        //         console.log(res)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     })
     }
     function addAnotherReview() {
         let reviewsCp = [...reviews];

@@ -7,14 +7,14 @@ const ReviewPage = () => {
     const [reviews, setReviews] = useState(false)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/reviews')
+        axios.get(`${process.env.REACT_APP_API_BASE_URL}/reviews`)
             .then((res) => {
-                
+
                 console.log(res.data)
                 setReviews(res.data)
             })
     }, [])
-    
+
     const ShowReviews = () => {
         return reviews && reviews.map((review) => {
             return (

@@ -11,17 +11,17 @@ const IndividualReview = (props) => {
     const history = useHistory()
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/reviews/${props.match.params.id}`)
+        axios.get(`${process.env.REACT_APP_API_BASE_URL}/reviews/${props.match.params.id}`)
             .then((res) => {
-                
+
                 console.log(res.data)
                 setIndividual(res.data)
             })
     }, [])
-    
+
 
     const handleOnClick = () => {
-        axios.delete(`http://localhost:3000/reviews/${props.match.params.id}`)
+        axios.delete(`${process.env.REACT_APP_API_BASE_URL}/reviews/${props.match.params.id}`)
             .then((res) => {
                 console.log(res)
                 history.push("/reviews")
@@ -30,7 +30,7 @@ const IndividualReview = (props) => {
                 console.log(error)
             })
     }
-console.log(user)
+    console.log(user)
     const ShowIndividual = () => {
 
         return (
@@ -50,13 +50,13 @@ console.log(user)
                         </>
                     )}
                 </div>
-                {user.userType === "admin" ?(
+                {user.userType === "admin" ? (
                     <div className="text-center">
                         <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
                         <button onClick={handleOnClick}>Delete</button>
                     </div>
                 ) : null}
-                
+
             </div>
         )
     }

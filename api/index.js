@@ -8,16 +8,16 @@ var jwt = require("jsonwebtoken");
 
 
 
-require ('dotenv').config();
+require('dotenv').config();
 app.use(cors())
 app.options('*', cors()) // include before other routes
 
 //Nodemon file
 mongoose
-    .connect("mongodb://localhost/final-project", { 
+    .connect("mongodb://localhost/final-project", {
         useCreateIndex: true,
         useNewUrlParser: true,
-        useUnifiedTopology: true, 
+        useUnifiedTopology: true,
     })
     .then((x) => {
         console.log(
@@ -56,6 +56,6 @@ app.post("/writeReview", (req, res) => {
         })
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("running")
 })

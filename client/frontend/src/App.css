@@ -1,3 +1,8 @@
+div {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+}
+
 .App {
   text-align: center;
 }
@@ -44,10 +49,16 @@
 .nav-options {
   font-size: .8rem;
   margin: 0 .3rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-link {
+  margin-right: 1rem;
 }
 
 .jumbotron{
   width: 340px;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .about-jumbo{
@@ -88,15 +99,20 @@
 
 .podcasts {
   margin: 2rem;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
 
 .podcast-card {
-  height: 22rem;
+  height: 30rem;
+  width: 15rem;
+}
+
+.card-body{
+ height: 20rem;
 }
 
 .podcast-text {
-  font-size: 12px;
+  font-size: 17.5px;
 }
 /* .container h1{
   margin-top: 1rem;
@@ -143,7 +159,7 @@
 
 .card-img-overlay h1, 
 .card-img-overlay h4{
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: white;
   text-shadow: 2px 2px black;
   font-weight: bold;
@@ -155,8 +171,13 @@
 }
 
 .footer{
-  height: 100%rem;
+  height: 100%;
   margin-right: 0 !important;
+}
+
+.mission-footer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;;
 }
 
 .social-icons-footer {
@@ -178,8 +199,21 @@ element.style {
     /*padding-left: 5rem !important; // for web */
     padding-left: 15rem;
     padding-right: 15rem;
-    } 
+  } 
     
+  .about-cards {
+    height: 62rem;
+    width: 20rem;
+  }
+
+  .podcast-card {
+    height: 33rem;
+  }
+
+  .podcast-text {
+    font-size: 20px;
+  }
+  
 }
 
   .video-port{
@@ -197,9 +231,8 @@ element.style {
 }
 
 .about-cards {
-  height: 50rem;
+  width: 23.5rem;
 }
-
 
 .socials-about {
   text-align: center;

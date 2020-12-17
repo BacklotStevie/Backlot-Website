@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className="footer row text-center bg-dark text-white ml-5 mr-5 mt-5">
-            <div className="col-12 col-md-4 mt-5 mb-5 border border-white border-top-0 border-bottom-0 border-left-0">
+            <div className="mission-footer col-12 col-md-4 mt-5 mb-5 border border-white border-top-0 border-bottom-0 border-left-0">
                 <h4 class="services-footer">Our Mission Statement</h4>
                 <p className=''>Inside the Backlot is a community. A place for cinephiles and filmmakers to connect and interact with one another. Our goal here at the Backlot is to expose the public to new films and up-and-coming filmmakers looking to leave their mark on the industry. For many, film is a hobby. For some, film is a passion. One thing is certain: film is art, and like any art, it’s a way to get your voice heard. Here are our voices.
                 <br /><br />Welcome to Inside the Backlot.</p>
@@ -15,8 +15,8 @@ const Footer = () => {
                     <a href="https://www.youtube.com/channel/UCjzTSGj_1r7K-W3kzZGYIdw"><img src="https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png" className="social-icons-footer"></img></a>
                 </div>
             </div>
-            <div className="col-12 col-md-4 p-1 mt-5 mb-5 border border-white border-top-0 border-bottom-0 border-left-0 d-flex">
-                <div className='col-12'>
+            <div className="col-12 col-md-4 p-1 mt-5 mb-5 border border-white border-top-0 border-bottom-0 border-left-0 d-flex justify-content-around">
+                <div className='mission-footer'>
                     <h4>Genres</h4>
                     <ul className='list-unstyled'>
                         <li>Action</li>
@@ -28,7 +28,8 @@ const Footer = () => {
                         <li>Romance</li>
                         <li>Sci-Fi</li>
                     </ul>
-
+                </div>
+                <div>
                     <h4>Where to Listen</h4>
                     <ul className='list-unstyled'>
                         <li><a href="//podcasts.apple.com/us/podcast/inside-the-backlot/id1460214563">Apple Podcasts</a></li>
@@ -37,7 +38,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="col-12 col-md-4 mt-5 mb-5">
+            <div className="mission-footer col-12 col-md-4 mt-5 mb-5">
                 <h1>Contact Us</h1>
                 <h2>Test2</h2>
                 <p>Test2</p>

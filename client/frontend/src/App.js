@@ -3,7 +3,7 @@ import './App.css';
 import AddReview from './Components/addreview';
 import Header from '../src/Components/header';
 import ReviewPage from '../src/Components/reviewpage'
-import IndividualReview from '../src/Components/individualreview'
+import IndividualReview from './Components/individualreview'
 import { Route } from 'react-router-dom'
 import EditReview from '../src/Components/editreview'
 import Footer from '../src/Components/footer';
@@ -21,12 +21,13 @@ function App(props) {
     <>
       <Header />
       {/* <AddReview /> */}
-
+      <Route exact path="/addreview" render={(props) => <AddReview  {...props} />} />
 
       <Route exact path="/home" render={(props) => <HomePage {...props} />} />
+      <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />
       <Route exact path="/reviews" render={(props) => <ReviewsPage {...props} />} />
 
-      <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />
+      
       <Route exact path="/reviews/edit/:id" render={(props) => <EditReview {...props} />} />
       <Route exact path="/signup" render={(props) => <Adduser {...props} />} />
       <Route exact path="/login" render={(props) => <Login {...props} />} />

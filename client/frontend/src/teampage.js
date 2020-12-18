@@ -1,8 +1,15 @@
 import React from 'react';
 import { CardDeck } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
+import AddReview from './Components/addreview'
+import { useContext } from "react";
+import { userContext } from "./context/UserCtx";
+import { Link } from 'react-router-dom'
 
 const TeamPage = () => {
+
+    const { user } = useContext(userContext);
+
     return (
         <div className="container">
             <div className="row about-cards">
@@ -48,6 +55,13 @@ const TeamPage = () => {
                             </Card.Footer> */}
                         </Card>
                     </CardDeck>
+
+                    {user.userType === "admin" ? (
+                    <div className="text-center">
+                        <Link to={'/reviews/addreview'}><button className="m-3">Add</button></Link>
+                        
+                    </div>
+                ) : null}
                 </div>
             </div>
         </div>

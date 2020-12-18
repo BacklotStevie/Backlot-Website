@@ -21,7 +21,7 @@ function App(props) {
     <>
       <Header />
       {/* <AddReview /> */}
-
+      <Route exact path="/addreview" render={(props) => <AddReview  {...props} />} />
 
       <Route exact path="/home" render={(props) => <HomePage {...props} />} />
       <Route exact path="/reviews/:id" render={(props) => <IndividualReview {...props} />} />

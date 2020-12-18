@@ -55,7 +55,7 @@ const IndividualReview = (props) => {
                     <div className="text-center">
                         <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
                         <button onClick={handleOnClick}>Delete</button>
-                        <AddReview/>
+                        
                     </div>
                 ) : null}
                 

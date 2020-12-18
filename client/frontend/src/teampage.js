@@ -59,6 +59,9 @@ const TeamPage = () => {
                     
                 </div>
             </div>
+            <div>
+                <AddReview/>
+            </div>
         </div>
     );
 };

@@ -51,13 +51,14 @@ const IndividualReview = (props) => {
                         </>
                     )}
                 </div>
-                {/* {user.userType === "admin" ? (
+                {user.userType === "admin" ? (
                     <div className="text-center">
                         <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
                         <button onClick={handleOnClick}>Delete</button>
+                        <AddReview/>
                     </div>
-                ) : null} */}
-                <AddReview/>
+                ) : null}
+                
             </div>
         )
     }

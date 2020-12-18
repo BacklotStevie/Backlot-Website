@@ -3,7 +3,7 @@ import './App.css';
 import AddReview from './Components/addreview';
 import Header from '../src/Components/header';
 import ReviewPage from '../src/Components/reviewpage'
-import IndividualReview from '../src/Components/Individualreview'
+import IndividualReview from './Components/individualreview'
 import { Route } from 'react-router-dom'
 import EditReview from '../src/Components/editreview'
 import Footer from '../src/Components/footer';

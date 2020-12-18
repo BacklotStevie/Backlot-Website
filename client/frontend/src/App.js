@@ -1,6 +1,6 @@
 
 import './App.css';
-import AddReview from './Components/addreview';
+import AddReview from '../src/Components/addreview';
 import Header from '../src/Components/header';
 import ReviewPage from '../src/Components/reviewpage'
 import IndividualReview from './Components/individualreview'

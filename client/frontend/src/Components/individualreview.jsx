@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import { userContext } from "../context/UserCtx";
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
+import AddReview from './addreview'
 
 const IndividualReview = (props) => {
     const { user } = useContext(userContext);
@@ -50,13 +51,13 @@ const IndividualReview = (props) => {
                         </>
                     )}
                 </div>
-                {user.userType === "admin" ? (
+                {/* {user.userType === "admin" ? (
                     <div className="text-center">
                         <Link to={`/reviews/edit/${individual._id}`}><button className="m-3">Edit</button></Link>
                         <button onClick={handleOnClick}>Delete</button>
                     </div>
-                ) : null}
-
+                ) : null} */}
+                <AddReview/>
             </div>
         )
     }

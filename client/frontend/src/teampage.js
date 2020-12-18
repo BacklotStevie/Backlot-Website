@@ -56,12 +56,7 @@ const TeamPage = () => {
                         </Card>
                     </CardDeck>
 
-                    {user.userType === "admin" ? (
-                    <div className="text-center">
-                        <Link to={'/reviews/addreview'}><button className="m-3">Add</button></Link>
-                        
-                    </div>
-                ) : null}
+                    
                 </div>
             </div>
         </div>
